@@ -38,7 +38,8 @@ public class GitHubRepoAdapter extends ArrayAdapter<GitHubRepo> {
 
         GitHubRepo item = values.get(position);
         String message = item.getName();
-        textView.setText(message);
+        String id = item.getId();
+        textView.setText(message + id);
 
         return row;
     }

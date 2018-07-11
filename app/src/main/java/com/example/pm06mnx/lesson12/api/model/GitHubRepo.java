@@ -7,4 +7,10 @@ public class GitHubRepo {
     public String getName() {
         return name;
     }
+
+    private String id;
+
+    public String getId() {
+        return id;
+    }
 }
