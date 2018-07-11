@@ -1,10 +1,11 @@
 package com.example.pm06mnx.lesson12.service.dto;
 
-import com.example.pm06mnx.lesson12.utils.LongToDateAdapter;
+import com.example.pm06mnx.lesson12.utils.UnixTimeToDateAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Данные по погоде в момент времени
@@ -12,10 +13,11 @@ import java.util.Date;
 public class WeatherItem {
 
     @SerializedName("dt")
-    @JsonAdapter(LongToDateAdapter.class)
+    @JsonAdapter(UnixTimeToDateAdapter.class)
     private Date date;
-    private MainWeatherData main;
+    private MainWeatherData main;;
     private WindData wind;
+    private List<WeatherData> weather;
 
     public Date getDate() {
         return date;
@@ -39,5 +41,13 @@ public class WeatherItem {
 
     public void setWind(WindData wind) {
         this.wind = wind;
+    }
+
+    public List<WeatherData> getWeather() {
+        return weather;
+    }
+
+    public void setWeather(List<WeatherData> weather) {
+        this.weather = weather;
     }
 }

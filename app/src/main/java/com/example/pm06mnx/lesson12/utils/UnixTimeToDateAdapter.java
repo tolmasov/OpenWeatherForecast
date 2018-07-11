@@ -11,7 +11,7 @@ import java.util.Date;
 /**
  * Адаптер для конвертации Long<=>Date
  */
-public class LongToDateAdapter extends TypeAdapter<Date> {
+public class UnixTimeToDateAdapter extends TypeAdapter<Date> {
     @Override
     public void write(JsonWriter out, Date value) throws IOException {
         if (value == null) {
@@ -28,6 +28,6 @@ public class LongToDateAdapter extends TypeAdapter<Date> {
             return null;
         }
         long time = in.nextLong();
-        return new Date(time);
+        return new Date(time*1000);
     }
 }

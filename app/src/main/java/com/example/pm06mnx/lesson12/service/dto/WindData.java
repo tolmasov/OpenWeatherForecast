@@ -5,31 +5,22 @@ package com.example.pm06mnx.lesson12.service.dto;
  */
 public class WindData {
 
-    private Float temp;
-    private Float pressure;
-    private Integer humidity;
+    private Float speed;
+    private Float deg;
 
-    public Float getTemp() {
-        return temp;
+    public Float getSpeed() {
+        return speed;
     }
 
-    public void setTemp(Float temp) {
-        this.temp = temp;
+    public void setSpeed(Float speed) {
+        this.speed = speed;
     }
 
-    public Float getPressure() {
-        return pressure;
+    public Float getDeg() {
+        return deg;
     }
 
-    public void setPressure(Float pressure) {
-        this.pressure = pressure;
-    }
-
-    public Integer getHumidity() {
-        return humidity;
-    }
-
-    public void setHumidity(Integer humidity) {
-        this.humidity = humidity;
+    public void setDeg(Float deg) {
+        this.deg = deg;
     }
 }
